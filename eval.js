@@ -216,9 +216,9 @@ class EvalDemo {
     ) {
         const offsetX = 150;
         let offsetY = 100;
-        const rectWidth = 40;
-        const rectHeight = 35;
-        const gapX = 20;
+        const rectWidth = 50;
+        const rectHeight = 50;
+        const gapX = 5;
         const gapY = 100;
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -229,22 +229,20 @@ class EvalDemo {
             ctx.textAlign = 'center';
             let j = 0;
             for (let i = 0; i < array.length; i++) {
-                ctx.strokeStyle = 'black';
                 if (offsetX + j * (rectWidth + gapX) + rectWidth > ctx.canvas.width) {
                     offsetY += rectHeight + gapY;
                     j = 0;
                 }
-                ctx.strokeRect(offsetX + j * (rectWidth + gapX), offsetY, rectWidth, rectHeight);
+                ctx.drawImage(wagon, offsetX + j * (rectWidth + gapX), offsetY, rectWidth, rectHeight);
                 if (array[i] != undefined && array[i] != null) {
                     let elementText = array[i].op !== undefined ? array[i].op : array[i].value.toLocaleString(undefined, { maximumFractionDigits: 2 });
                     elementText = force_ltr(elementText);
-                    ctx.fillText(elementText, offsetX + j * (rectWidth + gapX) + rectWidth / 2, offsetY + rectHeight / 2 + 5, rectWidth);
+                    ctx.fillText(elementText, offsetX + j * (rectWidth + gapX) + rectWidth / 2, offsetY + rectHeight + 20, rectWidth);
                     if (markedElements[label] && markedElements[label].has(i)) {
                         ctx.strokeStyle = 'red';
-                        ctx.strokeRect(offsetX + j * (rectWidth + gapX), offsetY, rectWidth, rectHeight);
+                        ctx.strokeRect(offsetX + j * (rectWidth + gapX) - 2, offsetY - 2, rectWidth + 2, rectHeight + 2);
                     }
                 }
-                ctx.fillText(i, offsetX + j * (rectWidth + gapX) + rectWidth / 2, offsetY + rectHeight + 20, rectWidth);
                 j++;
             }
         }

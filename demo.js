@@ -13,6 +13,7 @@ canvasWidthInput.value = canvas.width;
 canvasHeightInput.value = canvas.height;
 const ctx = canvas.getContext("2d");
 const animationControl = document.getElementById("animation-speed");
+const wagon = document.getElementById("wagon");
 let animationSpeed;
 let playing = false;
 let demo = null;
