@@ -28,23 +28,23 @@ let langStrings = {
         langSelectLabel: "Switch Language:",
         langSwitcherFloat: "right",
         canvasHeightWarning: "Canvas is not high enough to draw all data - Adjust its height from the controls to the left",
-        discardLeftParenthesis: "popping left parenthesis",
-        mismatchedParentheses: "mismatched parentheses",
-        invalidSyntax: "invalid syntax",
+        discardLeftParenthesis: "Popping left parenthesis",
+        mismatchedParentheses: "Mismatched parentheses",
+        invalidSyntax: "Invalid syntax",
         operations: "operations",
         output: "output",
         description: 'A demo of the <a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">Shunting-yard algorithm</a>',
         title: "A demo of the Shunting-yard algorithm",
         opListSummary: "Supported operations",
         pushingOperand: function (n) {
-            return `pushing operand ${n} to output stack`;
+            return `Pushing operand ${n} to output stack`;
         },
         pushingOperator: function (op, operandsNum) {
             let label = (operandsNum > 0 || (op.indexOf(')') !== -1 || op.indexOf('(') !== -1)) ? "operator" : "constant";
-            return `pushing ${label} '${op}' to operations stack`;
+            return `Pushing ${label} '${op}' to operations stack`;
         },
         evaluatingConstant: function (op) {
-            return `evaluating constant '${op}'`;
+            return `Evaluating constant '${op}'`;
         },
         evaluatingUnaryOperation: function (op, operand) {
             let expr;
@@ -54,26 +54,26 @@ let langStrings = {
                 expr = `'${op}(${operand})'`;
             }
             expr = force_ltr(expr);
-            return `evaluating operation ${expr}`;
+            return `Evaluating operation ${expr}`;
         },
         evaluatingOperation: function (op, opr1, opr2) {
             let expr = force_ltr(`${opr1} ${op} ${opr2}`);
-            return `evaluating operation '${expr}'`;
+            return `Evaluating operation '${expr}'`;
         },
         pushingOperationResult: function (res) {
-            return `pushing operation result '${res}' to output stack`;
+            return `Pushing operation result '${res}' to output stack`;
         },
         expressionResult: function (res) {
-            return `expression evaluation finished. result is '${res}'`;
+            return `Expression evaluation finished. Result is '${res}'`;
         },
         expectedOperandForUnary: function (op) {
-            return `found no operand for operator '${op}', which takes one operand`;
+            return `Found no operand for operator '${op}', which takes one operand`;
         },
         expectedOperandForBinary: function (op) {
-            return `found no operands for operator '${op}', which takes two operands`;
+            return `Found no operands for operator '${op}', which takes two operands`;
         },
         notValidAsUnary: function (op) {
-            let msg = `operator '${op}' is not valid as unary`;
+            let msg = `Operator '${op}' is not valid as unary`;
             if (op.indexOf('+') !== -1 || op.indexOf('-') !== -1) {
                 msg += ' here';
             }
