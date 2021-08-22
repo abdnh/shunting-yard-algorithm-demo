@@ -33,7 +33,7 @@ let langStrings = {
         invalidSyntax: "Invalid syntax",
         operations: "operations",
         output: "output",
-        description: 'A demo of the <a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">Shunting-yard algorithm</a>',
+        description: 'A demo of the <a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">Shunting-yard algorithm</a> for parsing mathematical expressions',
         title: "A demo of the Shunting-yard algorithm",
         opListSummary: "Supported operations",
         pushingOperand: function (n) {
@@ -104,8 +104,8 @@ let langStrings = {
         invalidSyntax: "هناك خطأ في التعبير",
         operations: "مكدس العمليات",
         output: "مكدس المخرجات",
-        description: 'استعراض لخوارزمية <a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">Shunting-yard</a>',
-        title: "استعراض لخوارزمية Shunting-yard",
+        description: 'استعراض لخوارزمية <a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">ساحة تحويل السكك الحديدية</a> لحساب التعابير الرياضية',
+        title: "استعراض لخوارزمية ساحة تحويل السكك الحديدية",
         opListSummary: "العمليات المدعومة",
         pushingOperand: function (n) {
             return `دفع المعامل ${n} إلى مكدس المخرجات`;
