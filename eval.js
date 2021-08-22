@@ -426,8 +426,10 @@ class EvalDemo {
                 else {
                     let topOp = null;
                     while ((topOp = this.data.ops[this.data.ops.length - 1]) &&
-                        operator.precedence >= topOp.precedence &&
-                        topOp.op !== "(") {
+                        topOp.op !== "(" &&
+                        (operator.precedence > topOp.precedence ||
+                            (operator.precedence == topOp.precedence &&
+                                !(operator.op === "^" && operator.op === topOp.op)))) {
                         this._evalOpFromStack();
                     }
 
