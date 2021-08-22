@@ -95,16 +95,16 @@ let langStrings = {
         height: "الارتفاع:",
         width: "العرض:",
         changeCanvasSize: "تغيير حجم مساحة الرسم",
-        expressionInputLabel: "التعبير الرياضي الذي تريد حسابه:",
+        expressionInputLabel: "العبارة الرياضية التي تريد حسابها:",
         langSelectLabel: "تغيير اللغة:",
         langSwitcherFloat: "left",
         canvasHeightWarning: "ارتفاع مساحة الرسم غير كافٍ لرسم كل البيانات - اضبط ارتفاعها من الخيارات على اليمين",
         discardLeftParenthesis: "طرح القوس الأيسر",
         mismatchedParentheses: "هناك أقواس ناقصة",
-        invalidSyntax: "هناك خطأ في التعبير",
+        invalidSyntax: "هناك خطأ في العبارة",
         operations: "مكدس العمليات",
         output: "مكدس المخرجات",
-        description: 'استعراض لخوارزمية <a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">ساحة تحويل السكك الحديدية</a> لحساب التعابير الرياضية',
+        description: 'استعراض لخوارزمية <a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">ساحة تحويل السكك الحديدية</a> لحساب العبارات الرياضية',
         title: "استعراض لخوارزمية ساحة تحويل السكك الحديدية",
         opListSummary: "العمليات المدعومة",
         pushingOperand: function (n) {
@@ -135,7 +135,7 @@ let langStrings = {
             return `دفع نتيجة العملية '${res}' إلى مكدس المخرجات`;
         },
         expressionResult: function (res) {
-            return `تم حساب نتيجة التعبير. النتيجة هي '${res}'`;
+            return `تم حساب نتيجة العبارة. النتيجة هي '${res}'`;
         },
         expectedOperandForUnary: function (op) {
             return `تعذر إيجاد معامل لعملية '${op}'، والتي تأخذ معاملا واحدا`;
@@ -151,7 +151,7 @@ let langStrings = {
             return msg;
         },
         evaluatingExpression: function (expr) {
-            return `حساب التعبير "${expr}"`;
+            return `حساب العبارة "${expr}"`;
         },
     }
 }
