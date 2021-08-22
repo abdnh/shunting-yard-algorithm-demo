@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="utf-8">
+	<title>A demo of the Shunting-yard algorithm</title>
+	<style>
+		#controls div {
+			margin-bottom: 1em;
+		}
+
+		#speed-control {
+			display: inline-flex;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		#expr-label {
+			display: inline-block;
+			min-width: 300px;
+		}
+
+		#expr-input {
+			width: 600px;
+		}
+
+		#lang-switcher {
+			float: right;
+		}
+
+		#description {
+			text-align: center;
+			font-size: 1.5em;
+			font-weight: bold;
+			margin-top: 0.5em;
+		}
+
+		#op-list-details {
+			margin-top: 1em;
+		}
+
+		#op-list > li {
+			display: inline list-item;
+			list-style: none;
+			margin: 1em;
+			font-size: 1.25em;
+		}
+	</style>
+</head>
+
+<body>
+	<p id="description">A demo of the <a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">Shunting-yard algorithm</a></p>
+	<div id="controls">
+		<div id="lang-switcher">
+			<label for="lang-select" id="lang-select-label">Switch Language:</label>
+			<select name="langs" id="lang-select">
+			</select>
+		</div>
+		<button id="step-back">Step Back</button>
+		<button id="step-forward">Step Forward</button>
+		<button id="resume-button">Resume</button>
+		<button id="play-button">Play</button>
+		<div id="speed-control">
+			<input type="range" min="100" max="1500" id="animation-speed" value="500" step="100">
+			<label for="speed" id="speed-label">Animation Speed</label>
+		</div>
+		<div id="canvas-controls">
+			<label for="canvas-width" id="canvas-width-label">Width:</label>
+			<input type="number" id="canvas-width">
+			<label for="canvas-height" id="canvas-height-label">Height:</label>
+			<input type="number" id="canvas-height">
+			<button id="canvas-dims-btn">Change Canvas Size</button>
+			<span id="warning" style="display: none; color: red;"></span>
+		</div>
+		
+		<label for="expr-input" id="expr-label">Mathematical expression to evaluate:</label>
+		<input type="text" id="expr-input" name="expr" dir="ltr">
+	</div>
+	<details id="op-list-details">
+		<summary id="op-list-summary">Supported operations</summary>
+		<ul id="op-list"></ul>
+	</details>
+	<canvas id="canvas" width="1000" height="500"></canvas>
+
+	<script src="eval.js"></script>
+	<script src="demo.js"></script>
+	<script src="lang.js"></script>
+</body>
+
+</html>
