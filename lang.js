@@ -104,7 +104,7 @@ let langStrings = {
         invalidSyntax: "هناك خطأ في العبارة",
         operations: "مكدس العمليات",
         output: "مكدس المخرجات",
-        description: 'استعراض لخوارزمية <a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">ساحة تحويل السكك الحديدية</a> لحساب العبارات الرياضية',
+        description: 'استعراض لخوارزمية <a href="https://www.abdnh.net/shunting-yard-algorithm">ساحة تحويل السكك الحديدية</a> لحساب العبارات الرياضية',
         title: "استعراض لخوارزمية ساحة تحويل السكك الحديدية",
         opListSummary: "العمليات المدعومة",
         pushingOperand: function (n) {
