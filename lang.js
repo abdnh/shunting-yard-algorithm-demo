@@ -176,6 +176,7 @@ function setLang(lang) {
     description.innerHTML = strings.description;
     title.textContent = strings.title;
     opListSummary.textContent = strings.opListSummary;
+    setCanvasDimensions(document.body.clientWidth, document.body.clientHeight);
 }
 
 function force_ltr(s) {

@@ -6,7 +6,7 @@ const stepForwardButton = document.getElementById("step-forward");
 const opList = document.getElementById("op-list");
 const canvasDimensionsButton = document.getElementById("canvas-dims-btn");
 const canvas = document.getElementById("canvas");
-setCanvasDimensions(document.documentElement.clientWidth, document.documentElement.clientHeight);
+setCanvasDimensions(document.body.clientWidth, document.body.clientHeight);
 const canvasWidthInput = document.getElementById("canvas-width");
 const canvasHeightInput = document.getElementById("canvas-height");
 canvasWidthInput.value = canvas.width;
